@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="v2R-p6-6D0">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--ScanQR CodeVC-->
+        <scene sceneID="Clt-3d-WQ2">
+            <objects>
+                <viewController id="v2R-p6-6D0" customClass="ScanQRCodeVC" customModule="二维码" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UuD-Xk-z6J"/>
+                        <viewControllerLayoutGuide type="bottom" id="Q3V-ER-dAa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xVl-oL-8A6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dXR-43-e9j">
+                                <rect key="frame" x="62" y="64" width="250" height="250"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_border" translatesAutoresizingMaskIntoConstraints="NO" id="Y21-Ae-UoL">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrcode_scanline_qrcode" translatesAutoresizingMaskIntoConstraints="NO" id="aUj-wT-AyA">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="pKk-aP-KE4"/>
+                                            <constraint firstAttribute="height" constant="250" id="upI-7n-RTa"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="Y21-Ae-UoL" firstAttribute="top" secondItem="dXR-43-e9j" secondAttribute="top" id="MUq-hn-ahM"/>
+                                    <constraint firstAttribute="height" constant="250" id="VZ1-qH-DMh"/>
+                                    <constraint firstAttribute="bottom" secondItem="aUj-wT-AyA" secondAttribute="bottom" id="eUK-wZ-b5C"/>
+                                    <constraint firstAttribute="trailing" secondItem="Y21-Ae-UoL" secondAttribute="trailing" id="kml-dK-0cP"/>
+                                    <constraint firstItem="Y21-Ae-UoL" firstAttribute="leading" secondItem="dXR-43-e9j" secondAttribute="leading" id="lER-hE-hgT"/>
+                                    <constraint firstAttribute="width" constant="250" id="nng-pG-Pu3"/>
+                                    <constraint firstAttribute="bottom" secondItem="Y21-Ae-UoL" secondAttribute="bottom" id="pXd-2C-g0Y"/>
+                                    <constraint firstItem="aUj-wT-AyA" firstAttribute="leading" secondItem="dXR-43-e9j" secondAttribute="leading" id="zqP-w7-QHR"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="dXR-43-e9j" firstAttribute="leading" secondItem="xVl-oL-8A6" secondAttribute="leading" constant="62" id="4Z2-hp-Eqs"/>
+                            <constraint firstItem="dXR-43-e9j" firstAttribute="top" secondItem="UuD-Xk-z6J" secondAttribute="bottom" id="jcK-mF-Kwu"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="animationBackView" destination="dXR-43-e9j" id="M7z-7E-Ogc"/>
+                        <outlet property="chongjiboImageView" destination="aUj-wT-AyA" id="wtr-mA-Kfm"/>
+                        <outlet property="toBottom" destination="eUK-wZ-b5C" id="JeC-zE-Kbv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="M6m-EF-LvN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="347.5" y="783.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="qrcode_border" width="51" height="51"/>
+        <image name="qrcode_scanline_qrcode" width="218" height="170"/>
+    </resources>
+</document>

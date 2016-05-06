@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="14F1605" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GgG-I8-DgZ">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--DectorQR CodeVC-->
+        <scene sceneID="SHF-oU-Jch">
+            <objects>
+                <viewController id="GgG-I8-DgZ" customClass="DectorQRCodeVC" customModule="二维码" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0Sm-32-heL"/>
+                        <viewControllerLayoutGuide type="bottom" id="bpI-la-nLa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="FAK-dc-9kI">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZPu-ps-IOh">
+                                <rect key="frame" x="150" y="362" width="75" height="30"/>
+                                <state key="normal" title="识别二维码"/>
+                                <connections>
+                                    <action selector="detectorQRCode" destination="GgG-I8-DgZ" eventType="touchUpInside" id="Mjn-J1-hEk"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="erweima.png" translatesAutoresizingMaskIntoConstraints="NO" id="yB4-Rk-H3w">
+                                <rect key="frame" x="55" y="134" width="265" height="142"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="YgZ-MJ-hgJ"/>
+                                    <constraint firstAttribute="width" constant="265" id="yTc-LX-aMN"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="yB4-Rk-H3w" firstAttribute="top" secondItem="0Sm-32-heL" secondAttribute="bottom" constant="70" id="Rvb-lx-OUF"/>
+                            <constraint firstItem="yB4-Rk-H3w" firstAttribute="centerX" secondItem="FAK-dc-9kI" secondAttribute="centerX" id="vQi-9x-LJ0"/>
+                        </constraints>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="qrCodeImageView" destination="yB4-Rk-H3w" id="xJr-g9-oyT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XAc-ae-mUa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="246.5" y="113.5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="erweima.png" width="816" height="359"/>
+    </resources>
+</document>
